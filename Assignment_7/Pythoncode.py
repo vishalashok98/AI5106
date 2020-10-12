@@ -9,13 +9,13 @@ y = np.linspace(-5,5,len)
 
 V = np.array(([35,-6],[-6,30]))
 u = np.array(([16,-54]))
-f = -60
+f = 39
 c = -LA.inv(V)@u
 
 D_vec,P = LA.eig(V)
 D = np.diag(D_vec)
-a = np.sqrt(-f/D_vec[0])
-b = np.sqrt(-f/D_vec[1])
+a = np.sqrt(f/D_vec[0])
+b = np.sqrt(f/D_vec[1])
 
 len = 50
 theta = np.linspace(0,2*np.pi,len)
