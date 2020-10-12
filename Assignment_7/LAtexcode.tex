@@ -209,9 +209,9 @@ with center as
 \end{align}
 Calculating the center for given curve we get,
 \begin{align}
-    \vec{c} &= - \frac{1}{\abs{35*30 - 6*6}}\myvec{35  & 6 \\ 6 & 30}\myvec{16 \\ -54} \\
-    &= \frac{1}{1014}\myvec{236 \\ -1524} \\
-    &= \myvec{\frac{118}{507}  \\\frac{254}{169}}
+    \vec{c} &= - \frac{1}{\abs{35*30 - 6*6}}\myvec{30  & 6 \\ 6 & 35}\myvec{16 \\ -54} \\
+    &= \frac{1}{1014}\myvec{156 \\ -1794} \\
+    &= \myvec{\frac{2}{13}  \\\frac{-23}{13}}
 \end{align}
 
 For 
@@ -244,19 +244,20 @@ The eigenvalues are the roots of \eqref{ellipse_char_eq} given by
 Calculating the major and minor axes lengths using \eqref{axes_eq}, we get
 \begin{align}
 \vec{u}^T\vec{V}^{-1}\vec{u} &= \nonumber \\
-&= \myvec{16 -54}\frac{1}{1014}\myvec{35 & 6 \\ 6 & 30 }\myvec{16 \\ -54} \nonumber \\
-&= \frac{1}{1014}\myvec{16 & -54}\myvec{236 \\ -1524} \nonumber \\
-&= \frac{43036}{507} \nonumber \\
-\vec{u}^T\vec{V}^{-1}\vec{u} -f &= \frac{43036}{507} - 59 = \frac{13123}{507} \\
-\sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u} -f}{\lambda_1}} &= \sqrt{\frac{13123}{19773}} = \frac{814}{1000} \\
-\sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u} -f}{\lambda_2}} &= \sqrt{\frac{13123}{13182}} = \frac{997}{1000}
+&= \myvec{16 -54}\frac{1}{1014}\myvec{30 & 6 \\ 6 & 35 }\myvec{16 \\ -54} \nonumber \\
+&= \frac{1}{1014}\myvec{16 & -54}\myvec{156 \\ -1794} \nonumber \\
+&= 98 \nonumber \\
+\vec{u}^T\vec{V}^{-1}\vec{u} -f &= 98 - 59 = 39 \\
+\sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u} -f}{\lambda_1}} &= \sqrt{\frac{39}{39}} = 1 \\
+\sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u} -f}{\lambda_2}} &= \sqrt{\frac{39}{26}} = \frac{\sqrt{6}}{2}
 \end{align}
 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{LA Assignment/Figure_2.png}
-\caption{Ellipse with center (\frac{118}{507} \frac{254}{169}) and having the axes lengths as \frac{814}{1000} and \frac{997}{1000}}
+\includegraphics[width=\columnwidth]{LA Assignment/Assignment7.png}
+
+\caption{Ellipse with center \myvec{\frac{2}{13} & \frac{-23}{13}} and having the axes lengths as 1 and $\frac{\sqrt{6}}{2}$}
 \label{Fig:Circle}
 \end{figure}
 
