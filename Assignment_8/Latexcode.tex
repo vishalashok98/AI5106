@@ -172,10 +172,11 @@ and perform QR decomposition for the matrix V.
 
 
 
+
 \section{Solution}
 
 
-Comparing \eqref{given_curve_eq} with \eqref{gen_quad_eqn}, we get
+
 \begin{align}
 \vec{V} &= \myvec{35  & -6 \\ -6 & 30}
 \end{align}
@@ -197,6 +198,7 @@ Performing QR decomposition on $\vec{V}$ we get,
 \vec{e_1} &= \frac{1}{\sqrt{1261}}\myvec{35 \\ -6}  \\
 \vec{e_2} &= \frac{1}{380}\myvec{\frac{37839}{100} \\ -\frac{35895}{1000}}  \\
 \vec{Q} &= \myvec{\vec{e_1} & \vec{e_2}} \\
+\vec{Q} &= \myvec{\frac{35}{\sqrt{1261}} & \frac{37839}{38000} \\ \frac{-6}{\sqrt{1261}} & \frac{-35895}{380000}} \\
 \vec{R} &= \myvec{\sqrt{1261} & \frac{30\sqrt{13}}{\sqrt{97}} \\ 0 & \frac{-8805}{1000}} 
 \end{align}
 
