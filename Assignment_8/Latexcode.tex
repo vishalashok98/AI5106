@@ -196,10 +196,10 @@ and perform QR decomposition for the matrix V.
 Performing QR decomposition on $\vec{V}$ we get,
 \begin{align}
 \vec{e_1} &= \frac{1}{\sqrt{1261}}\myvec{35 \\ -6}  \\
-\vec{e_2} &= \frac{1}{380}\myvec{\frac{37839}{100} \\ -\frac{35895}{1000}}  \\
+\vec{e_2} &= \myvec{\frac{168622}{1000000} \\ \frac{9856}{10000}}  \\
 \vec{Q} &= \myvec{\vec{e_1} & \vec{e_2}} \\
-\vec{Q} &= \myvec{\frac{35}{\sqrt{1261}} & \frac{37839}{38000} \\ \frac{-6}{\sqrt{1261}} & \frac{-35895}{380000}} \\
-\vec{R} &= \myvec{\sqrt{1261} & \frac{30\sqrt{13}}{\sqrt{97}} \\ 0 & \frac{-8805}{1000}} 
+\vec{Q} &= \myvec{\frac{35}{\sqrt{1261}} & \frac{168622}{1000000} \\ \frac{-6}{\sqrt{1261}} & \frac{9856}{10000}} \\
+\vec{R} &= \myvec{\sqrt{1261} & \frac{-10982647}{1000000} \\ 0 & \frac{2855488}{100000}} 
 \end{align}
 
 It is easy to verify that $\vec{Q}\vec{R} = \vec{V}$ and $\vec{Q}^T\vec{Q} = \vec{I}$. Thus, $\vec{V}$  is decomposed into an orthogonal matrix and an upper triangular matrix.
