@@ -178,7 +178,21 @@ Download latex-tikz codes from
 https://github.com/vishalashok98/AI5006\end{lstlisting}
 %
 \section{Problem}
-Consider the vector space $P_n$ of real polynomials in $x$ of degree less than or equal to $n$. Define $T:P_2 \rightarrow P_3$ by $(Tf)(x)=\int_{0}^{x}f(t)dt+f'(x)$.Write the matrix representation of $T$ with respect to the bases ${1,x,X^2}$ and ${1,x,x^2,x^3}$ .
+Consider the vector space $P_n$ of real polynomials in $x$ of degree less than or equal to $n$. Define $T:P_2 \rightarrow P_3$ by $(Tf)(x)=\int_{0}^{x}f(t)dt+f'(x)$.Then the matrix representation of T with respect to the bases ${1,x,x^2}$ and ${1,x,x^2,x^3}$ is
+
+1.\begin{bmatrix}
+0 & 1 & 0 & 0\\1 & 0 & \frac{1}{2} & 0\\0 & 2 & 0 & \frac{1}{3}
+\end{bmatrix}
+2.\begin{bmatrix}
+0 & 1 & 0\\1 & 0 & 2\\0 & \frac{1}{2} & 0\\0 & 0 & \frac{1}{3}
+\end{bmatrix}\newline
+3.\begin{bmatrix}
+0 & 1 & 0 & 0 \\1 & 0 & 2 & 0\\0 & \frac{1}{2} & 0 & \frac{1}{3}
+\end{bmatrix}
+4.\begin{bmatrix}
+0 & 1 & 0\\1 & 0 & \frac{1}{2}\\0 & 2 & 0\\0 & 0 & \frac{1}{3}
+\end{bmatrix}
+    
 
 
 \section{Explanation}
@@ -200,6 +214,22 @@ $(Tf)(x)=\int_{0}^{x}f(t)dt+f'(x)$
 
 We should the image of basis vectors of domain space in co-domain space with respect to T.
 \newline
+Basis vector 
+
+\begin{bmatrix}
+            1\\x^{2} \\x^3
+\end{bmatrix}
+
+Image of basis vector in co-domain space is given by \newline
+$(Tf)(x)=\int_{0}^{x} f(t)dt+f'(x)$\newline
+
+$(Tf)(x)=\int_{0}^{x} 1+t+t^2 dt+ 1+2x$\newline
+$(Tf)(x)=t+\frac{t^2}{2}+\frac{t^3}{3}\Biggr|_{0}^{x}+1+2x$\newline
+$(Tf)(x)=3x+\frac{x^3}{3}+\frac{x^2}{2}+1$
+
+So coordinates of image of base vector is given by 
+
+
 Base vector 1:$f(x)=1$
 \newline
 $f'(x)=0$
@@ -209,79 +239,22 @@ It can be written as linear combination of basis vectors of co-domain space.
 \newline
 $x=0+1.x+0.x^2+0.x^3$
 \newline
-So coordinates of $T(1)$ with respect to co-domain basis is given by
-$[T(1)]$=\begin{bmatrix}
-0\\1\\0\\0
+So coordinates of $T(1)$ with respect to co-domain basis are\begin{bmatrix}
+1\\3\\\frac{1}{2}\\\frac{1}{3}
+\end{bmatrix}
+Co ordinates of basis vectors in domain space are \begin{bmatrix}
+1\\1\\1
 \end{bmatrix}
 
-Base vector 2: $f(x)=x$\newline
-$f'(x)=1$
-\newline
-$T(x)=\int_{0}^{x} tdt+1=\frac{t^2}{2}\Biggr|_{0}^{x}+1=\frac{x^2}{2}+1$\newline
-It can be written as linear combination of basis vectors of co-domain space.
-\newline
-$\frac{1}{2}x^2+1=1+0.x+\frac{1}{2}.x^2+0.x^3$
-\newline
-So coordinates of $T(1)$ with respect to co-domain basis is given by
-\newline
-$[T(x)]$=\begin{bmatrix}
-1\\0\\ \frac{1}{2}\\0
-\end{bmatrix}
+Among the given options matrix which maps coordinates of basis vector from domain space
+to co-domain space is
 
-Base vector 3:$f(x)=x^2$
-\newline
-$f'(x)=2x$
-\newline
-$T(x)=\int_{0}^{x} t^2dt+2x=\frac{t^3}{3}\Biggr|_{0}^{x}+2x=\frac{x^3}{3}+2x$\newline
-It can be written as linear combination of basis vectors of co-domain space.\newline
-$2x+\frac{1}{3}x^3=0+2.x+0.x^2+\frac{1}{3}.x^3$\newline
-So coordinates of $T(1)$ with respect to co-domain basis is given by\newline
-$[T(x^2)]$=\begin{bmatrix}
-0\\2\\ 0\\ \frac{1}{3}
-\end{bmatrix}
-\newline
-
-
-
-\begin{center}
-\begin{tabular}{ | m{7em} | m{5em}| m{5em} | } 
-\hline
-Basis Vectors & Image of basis vector & Coordinates \\ 
-\hline
-1 & $x$ & \begin{bmatrix}
-0\\1\\ 0\\ 0
-\end{bmatrix} \\ 
-\hline
-$x$ & $\frac{1}{2}x^2+1$ & \begin{bmatrix}
-1\\0\\ \frac{1}{2}\\ 0
-\end{bmatrix} \\ 
-\hline
-$x^2$ & $2x+\frac{1}{3}x^3$ & \begin{bmatrix}
-0\\2\\ 0\\ \frac{1}{3}
-\end{bmatrix} \\ 
-\hline
-
-\end{tabular}
-\end{center}
-
-
-
-
-
-
-
-
-\newpage
-
-
-Matrix associated with linear transformation is coordinates of images of basis vectors of domain with respect to basis vectors of co domain space.
-\newline
-$[T]=[[T(1)] & [T(x)]& [T(x^2)]]$
-\newline
-
-$[T(x)]$=\begin{bmatrix}
+$[T]$=\begin{bmatrix}
 0 & 1 & 0\\1 & 0 & 2\\0 & \frac{1}{2} & 0\\0 & 0 & \frac{1}{3}
 \end{bmatrix}
+
+
+
 
 
 
