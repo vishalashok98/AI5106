@@ -209,7 +209,7 @@ Here $P^{t}$ denotes transpose of $P$.
 
 
 \section{Explanation}
-A matrix is said to be invertible if its determinant is not equal to zero. 
+A matrix is said to be invertible if its rank is not less then number of rows or its a full rank matrix. 
 
 
 \section{Solution}
@@ -217,19 +217,26 @@ A matrix is said to be invertible if its determinant is not equal to zero.
 Let P be a invertible matrix given by
 P=\myvec{a & b \\c & d }
 
-For P to be invertible 
+For P to be invertible it must be full rank martrix. 
 \begin{align}
-    ad-bc\neq 0
+    P=\myvec{a & b\\ c & d}
 \end{align}
 
+        
+       Performing row operations to reduce it to echolon form.
+       \begin{align}
+    \myvec{a & b\\ c & d} \xleftrightarrow{R_2 = R_2 - \frac{cR_1}{b}}\myvec{1 & \frac{b}{a}\\ 0 & d-\frac{cb}{a}}
+\end{align}
+For P to be full rank matrix rows must be independent. So last row of echolon form must not be zero. 
+\begin{align}
+    d-\frac{bc}{a}\neq0
+\end{align}
 \begin{align}
  P^{t}AP=\myvec{a & b \\c & d }\myvec{0 & 1 \\1 & 0 }\myvec{a & b \\c & d }\newline
  \end{align}
  \begin{align}
  P^{t}AP=\myvec{a & b \\c & d}\myvec{c & d \\a & b } 
- 
 \end{align}
- 
 \begin{align}
  P^{t}AP=\myvec{2ac & ad+bc \\ad+bc & bd} 
 \end{align}
